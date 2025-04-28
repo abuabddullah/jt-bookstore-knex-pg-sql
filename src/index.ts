@@ -1,13 +1,13 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import cors from 'cors';
 import authorRoutes from './routes/authorRoutes';
 import bookRoutes from './routes/bookRoutes';
 
-dotenv.config();
+import configEnv from './config/config';
+
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = configEnv.DB_PORT || 5432;
 
 // Middleware
 app.use(cors());
