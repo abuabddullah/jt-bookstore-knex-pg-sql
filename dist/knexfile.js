@@ -15,11 +15,11 @@ const config = {
     development: {
         client: 'pg',
         connection: {
-            host: config_1.default.DB_HOST || 'localhost',
-            user: config_1.default.DB_USER || 'postgres',
-            password: config_1.default.DB_PASSWORD || 'postgres',
-            database: config_1.default.DB_NAME || 'bookstore',
-            port: Number(config_1.default.DB_PORT) || 5432,
+            host: config_1.default.DB_HOST,
+            user: config_1.default.DB_USER,
+            password: config_1.default.DB_PASSWORD,
+            database: config_1.default.DB_NAME,
+            port: config_1.default.DB_PORT,
             ssl: { rejectUnauthorized: false },
         },
         migrations: {
@@ -38,7 +38,7 @@ const config = {
             user: config_1.default.DB_USER,
             password: config_1.default.DB_PASSWORD,
             database: config_1.default.DB_NAME,
-            port: Number(config_1.default.DB_PORT) || 5432,
+            port: config_1.default.DB_PORT,
             ssl: { rejectUnauthorized: false },
         },
         migrations: {
@@ -51,6 +51,6 @@ const config = {
         },
     },
 };
-console.log("Knex DB connection config:", config.development.connection);
+console.log('Knex DB connection config:', config.development.connection);
 exports.default = config;
 module.exports = config;

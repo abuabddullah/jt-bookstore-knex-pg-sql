@@ -5,7 +5,6 @@ import bookRoutes from './routes/bookRoutes';
 
 import configEnv from './config/config';
 
-
 const app = express();
 const PORT = configEnv.DB_PORT || 5432;
 
