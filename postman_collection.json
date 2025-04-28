@@ -1,0 +1,208 @@
+{
+  "info": {
+    "_postman_id": "12345678-1234-1234-1234-1234567890ab",
+    "name": "Bookstore API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authors",
+      "item": [
+        {
+          "name": "Get All Authors",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/authors",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors"]
+            }
+          }
+        },
+        {
+          "name": "Get Author by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/authors/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Author",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/authors",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Jane Austen\",\n    \"bio\": \"English novelist known primarily for her six major novels\",\n    \"birthdate\": \"1775-12-16\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Author",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/authors/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors", "1"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Jane Austen\",\n    \"bio\": \"Updated bio: English novelist known primarily for her six major novels\",\n    \"birthdate\": \"1775-12-16\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Author",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/authors/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "Get All Books",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"]
+            }
+          }
+        },
+        {
+          "name": "Get Books by Author",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/books?author=1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"],
+              "query": [
+                {
+                  "key": "author",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Book by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/books/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Book",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Pride and Prejudice\",\n    \"description\": \"A romantic novel of manners published in 1813\",\n    \"published_date\": \"1813-01-28\",\n    \"author_id\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Book",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/books/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books", "1"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Pride and Prejudice\",\n    \"description\": \"Updated description: A romantic novel of manners published in 1813\",\n    \"published_date\": \"1813-01-28\",\n    \"author_id\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Book",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/books/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
