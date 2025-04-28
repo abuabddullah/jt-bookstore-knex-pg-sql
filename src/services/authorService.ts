@@ -1,8 +1,20 @@
 import db from '../db';
 import { Author, AuthorWithBooks } from '../types';
+import { queryWithFeatures } from '../utils/queryWithFeatures';
 
-export async function getAllAuthors(): Promise<Author[]> {
-  return db('authors').select('*');
+export async function getAllAuthors(options: any): Promise<any> {
+  const baseQuery = db('authors').select('*');
+
+  return queryWithFeatures(baseQuery, {
+    page: options.page ? parseInt(options.page) : undefined,
+    limit: options.limit ? parseInt(options.limit) : undefined,
+    search: options.search,
+    searchColumns: ['name'],
+    fields: options.fields?.split(','),
+    sortBy: options.sortBy,
+    sortOrder: options.sortOrder,
+    filters: {}
+  });
 }
 
 export async function getAuthorById(id: number): Promise<AuthorWithBooks | null> {

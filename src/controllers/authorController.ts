@@ -3,8 +3,8 @@ import * as authorService from '../services/authorService';
 
 export async function getAllAuthors(req: Request, res: Response) {
   try {
-    const authors = await authorService.getAllAuthors();
-    res.json(authors);
+    const result = await authorService.getAllAuthors(req.query);
+    res.json(result);
   } catch (error) {
     console.error('Error fetching authors:', error);
     res.status(500).json({ error: 'Failed to fetch authors' });

@@ -3,14 +3,8 @@ import * as bookService from '../services/bookService';
 
 export async function getAllBooks(req: Request, res: Response) {
   try {
-    const authorId = req.query.author ? parseInt(req.query.author as string) : undefined;
-
-    if (req.query.author && isNaN(authorId as number)) {
-      return res.status(400).json({ error: 'Invalid author ID' });
-    }
-
-    const books = await bookService.getAllBooks(authorId);
-    res.json(books);
+    const result = await bookService.getAllBooks(req.query);
+    res.json(result);
   } catch (error) {
     console.error('Error fetching books:', error);
     res.status(500).json({ error: 'Failed to fetch books' });

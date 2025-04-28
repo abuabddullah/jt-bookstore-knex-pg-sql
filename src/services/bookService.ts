@@ -1,19 +1,27 @@
 import db from '../db';
 import { Book, BookWithAuthor } from '../types';
+import { queryWithFeatures } from '../utils/queryWithFeatures';
 
-export async function getAllBooks(authorId?: number): Promise<BookWithAuthor[]> {
-  const query = db('books')
+export async function getAllBooks(options: any): Promise<any> {
+  const baseQuery = db('books')
     .select(
       'books.*',
-      db.raw("json_build_object('id', authors.id, 'name', authors.name) as author"),
+      db.raw("json_build_object('id', authors.id, 'name', authors.name) as author")
     )
     .join('authors', 'books.author_id', 'authors.id');
 
-  if (authorId) {
-    query.where({ author_id: authorId });
-  }
-
-  return query;
+  return queryWithFeatures(baseQuery, {
+    page: options.page ? parseInt(options.page) : undefined,
+    limit: options.limit ? parseInt(options.limit) : undefined,
+    search: options.search,
+    searchColumns: ['books.title'],
+    fields: options.fields?.split(','),
+    sortBy: options.sortBy,
+    sortOrder: options.sortOrder,
+    filters: {
+      author_id: options.author
+    }
+  });
 }
 
 export async function getBookById(id: number): Promise<BookWithAuthor | null> {
