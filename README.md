@@ -20,22 +20,20 @@ A RESTful API for a bookstore built with TypeScript, Express, Knex, and PostgreS
 ## Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/yourusername/bookstore-api.git
-cd bookstore-api
+git clone https://github.com/abuabddullah/jt-bookstore-knex-pg-sql.git
+cd jt-bookstore-knex-pg-sql
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
-3. Create a `.env` file based on `.env.example`:
-```bash
-cp .env.example .env
-```
+3. Create a `.env` file & Update the `.env` file with your PostgreSQL connection details:
 
-4. Update the `.env` file with your PostgreSQL connection details:
 ```
 DB_HOST=localhost
 DB_USER=your_postgres_user
@@ -44,12 +42,8 @@ DB_NAME=bookstore
 PORT=3000
 ```
 
-5. Create a PostgreSQL database:
-```bash
-createdb bookstore
-```
+5. Run migrations to create the database schema:
 
-6. Run migrations to create the database schema:
 ```bash
 npm run migrate:latest
 ```
@@ -62,7 +56,7 @@ To start the development server:
 npm run dev
 ```
 
-The API will be available at `http://localhost:3000`.
+The API will be available at `http://localhost:5432`.
 
 ## API Endpoints
 
@@ -88,6 +82,7 @@ The API will be available at `http://localhost:3000`.
 ### Creating an Author
 
 **Request**:
+
 ```http
 POST /authors
 Content-Type: application/json
@@ -100,6 +95,7 @@ Content-Type: application/json
 ```
 
 **Response**:
+
 ```json
 {
   "id": 1,
@@ -114,6 +110,7 @@ Content-Type: application/json
 ### Creating a Book
 
 **Request**:
+
 ```http
 POST /books
 Content-Type: application/json
@@ -127,6 +124,7 @@ Content-Type: application/json
 ```
 
 **Response**:
+
 ```json
 {
   "id": 1,

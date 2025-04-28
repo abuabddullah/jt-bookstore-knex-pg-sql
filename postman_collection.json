@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "12345678-1234-1234-1234-1234567890ab",
-    "name": "Bookstore API",
+    "name": "bookstore-knexPGexpress",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -13,10 +13,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/authors",
+              "raw": "http://localhost:5432/authors",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["authors"]
             }
           }
@@ -26,10 +26,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/authors/1",
+              "raw": "http://localhost:5432/authors/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["authors", "1"]
             }
           }
@@ -45,10 +45,10 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/authors",
+              "raw": "http://localhost:5432/authors",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["authors"]
             },
             "body": {
@@ -68,10 +68,10 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/authors/1",
+              "raw": "http://localhost:5432/authors/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["authors", "1"]
             },
             "body": {
@@ -85,10 +85,10 @@
           "request": {
             "method": "DELETE",
             "url": {
-              "raw": "http://localhost:3000/authors/1",
+              "raw": "http://localhost:5432/authors/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["authors", "1"]
             }
           }
@@ -103,10 +103,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/books",
+              "raw": "http://localhost:5432/books",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["books"]
             }
           }
@@ -116,10 +116,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/books?author=1",
+              "raw": "http://localhost:5432/books?author=1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["books"],
               "query": [
                 {
@@ -135,10 +135,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/books/1",
+              "raw": "http://localhost:5432/books/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["books", "1"]
             }
           }
@@ -154,10 +154,10 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/books",
+              "raw": "http://localhost:5432/books",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["books"]
             },
             "body": {
@@ -177,10 +177,10 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/books/1",
+              "raw": "http://localhost:5432/books/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["books", "1"]
             },
             "body": {
@@ -194,10 +194,10 @@
           "request": {
             "method": "DELETE",
             "url": {
-              "raw": "http://localhost:3000/books/1",
+              "raw": "http://localhost:5432/books/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "5432",
               "path": ["books", "1"]
             }
           }
