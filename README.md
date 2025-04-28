@@ -27,6 +27,16 @@ Import the included  <a href="https://github.com/abuabddullah/jt-bookstore-knex-
 - <a href="https://github.com/abuabddullah/jt-bookstore-knex-pg-sql/blob/main/src/migrations/20230101000001_create_books_table.ts" target="_blank">`20230101000001_create_books_table`</a>
 - <a href="https://github.com/abuabddullah/jt-bookstore-knex-pg-sql/blob/main/src/migrations/20230101000000_create_authors_table.ts" target="_blank">`20230101000000_create_authors_table`</a>
 
+## Env vars
+
+```
+DB_HOST=ep-fancy-sunset-a4zq98v7-pooler.us-east-1.aws.neon.tech
+DB_USER=neondb_owner
+DB_PASSWORD=npg_pxc5Tl0gSUwy
+DB_NAME=bookstore
+DB_PORT=5432
+NODE_ENV=development
+```
 ## Tech Stack
 
 - Express
@@ -52,11 +62,12 @@ npm install
 3. Create a `.env` file & Update the `.env` file with your PostgreSQL connection details:
 
 ```
-DB_HOST=localhost
-DB_USER=your_postgres_user
-DB_PASSWORD=your_postgres_password
+DB_HOST=ep-fancy-sunset-a4zq98v7-pooler.us-east-1.aws.neon.tech
+DB_USER=neondb_owner
+DB_PASSWORD=npg_pxc5Tl0gSUwy
 DB_NAME=bookstore
 DB_PORT=5432
+NODE_ENV=development
 ```
 
 5. Run migrations to create the database schema:
