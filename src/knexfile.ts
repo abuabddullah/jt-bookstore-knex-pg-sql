@@ -2,13 +2,6 @@ import { Knex } from 'knex';
 
 import configEnv from './config/config';
 
-console.log('Loaded Environment Variables:', {
-  host: configEnv.DB_HOST,
-  user: configEnv.DB_USER,
-  db: configEnv.DB_NAME,
-  port: configEnv.DB_PORT,
-  ssl: { rejectUnauthorized: false },
-});
 
 const config: { [key: string]: Knex.Config } = {
   development: {
