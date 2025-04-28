@@ -3,7 +3,14 @@ import { Author, AuthorWithBooks } from '../types';
 import { queryWithFeatures } from '../utils/queryWithFeatures';
 
 export async function getAllAuthors(options: any): Promise<any> {
-  const baseQuery = db('authors').select('*');
+  const baseQuery = db('authors')
+    .select(
+      'authors.*',
+      db.raw("json_agg(json_build_object('id', books.id, 'title', books.title)) as books")
+    )
+    .leftJoin('books', 'authors.id', 'books.author_id')
+    .groupBy('authors.id');
+
 
   return queryWithFeatures(baseQuery, {
     page: options.page ? parseInt(options.page) : undefined,
