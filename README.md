@@ -151,7 +151,3 @@ Import the included `postman_collection.json` file into Postman to test all API 
 - `npm run migrate:make [name]` - Create a new migration file
 - `npm run migrate:latest` - Run all migrations
 - `npm run migrate:rollback` - Rollback the last migration
-
-## License
-
-MIT

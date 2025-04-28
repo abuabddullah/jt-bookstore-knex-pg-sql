@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "70871671-2dce-4c62-bb46-c8a4620190f1",
+		"name": "bookstore-knexPGexpress",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21804089"
+	},
+	"item": [
+		{
+			"name": "author apis",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Jane Austen\",\r\n  \"bio\": \"Famous English novelist known for 'Pride and Prejudice'\",\r\n  \"birthdate\": \"1997-12-16\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5432/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    \"birthdate\": \"1999-12-16\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5432/authors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5432/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5432/authors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5432/authors/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"authors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "books apis",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"To Kill a Mockingbird\",\r\n  \"description\": \"A novel by Harper Lee published in 1960.\",\r\n  \"published_date\": \"1960-07-11\",\r\n  \"author_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5432/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"birthdate\": \"1999-12-16\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5432/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5432/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5432/books/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by author id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5432/books?author=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "author",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5432/books/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5432",
+							"path": [
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
