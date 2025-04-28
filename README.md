@@ -2,15 +2,6 @@
 
 A RESTful API for a bookstore built with TypeScript, Express, Knex, and PostgreSQL.
 
-## Features
-
-- Authors CRUD operations
-- Books CRUD operations
-- Book filtering by author
-- Detailed view for books including author information
-- Detailed view for authors including their books
-- Input validation using Joi
-- Error handling with appropriate HTTP status codes
 
 ## Github link
 https://github.com/abuabddullah/jt-bookstore-knex-pg-sql.git
@@ -43,6 +34,7 @@ NODE_ENV=development
 - Knex
 - PostgreSQL
 - Typescript
+
 
 ## Installation
 
@@ -85,6 +77,16 @@ npm run dev
 ```
 
 The API will be available at `http://localhost:5432`.
+
+## Features
+
+- Authors CRUD operations
+- Books CRUD operations
+- Book filtering by author
+- Detailed view for books including author information
+- Detailed view for authors including their books
+- Input validation using Joi
+- Error handling with appropriate HTTP status codes
 
 ## API Endpoints
 
