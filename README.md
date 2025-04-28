@@ -12,10 +12,27 @@ A RESTful API for a bookstore built with TypeScript, Express, Knex, and PostgreS
 - Input validation using Joi
 - Error handling with appropriate HTTP status codes
 
-## Requirements
+## Github link
+https://github.com/abuabddullah/jt-bookstore-knex-pg-sql.git
 
-- Node.js (v14+)
+## Testing with Postman
+
+Import the included  <a href="https://github.com/abuabddullah/jt-bookstore-knex-pg-sql/blob/main/bookstore-knexPGexpress.postman_collection.json" target="_blank">`bookstore-knexPGexpress.postman_collection.json`</a> file into Postman to test all API endpoints.
+
+## SQL file
+
+<a href="https://github.com/abuabddullah/jt-bookstore-knex-pg-sql/blob/main/schema.sql" target="_blank">`schema.sql`</a>
+
+## Migration files
+- <a href="https://github.com/abuabddullah/jt-bookstore-knex-pg-sql/blob/main/src/migrations/20230101000001_create_books_table.ts" target="_blank">`20230101000001_create_books_table`</a>
+- <a href="https://github.com/abuabddullah/jt-bookstore-knex-pg-sql/blob/main/src/migrations/20230101000000_create_authors_table.ts" target="_blank">`20230101000000_create_authors_table`</a>
+
+## Tech Stack
+
+- Express
+- Knex
 - PostgreSQL
+- Typescript
 
 ## Installation
 
@@ -39,7 +56,7 @@ DB_HOST=localhost
 DB_USER=your_postgres_user
 DB_PASSWORD=your_postgres_password
 DB_NAME=bookstore
-PORT=3000
+DB_PORT=5432
 ```
 
 5. Run migrations to create the database schema:
@@ -137,9 +154,6 @@ Content-Type: application/json
 }
 ```
 
-## Testing with Postman
-
-Import the included `postman_collection.json` file into Postman to test all API endpoints.
 
 ## Development Scripts
 
